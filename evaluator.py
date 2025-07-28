@@ -224,62 +224,6 @@ class HybridEvaluator:
         from datetime import datetime
         return datetime.now().isoformat()
 
-# Report Generator
-# class InterviewReportGenerator:
-#     def __init__(self):
-#         pass
-    
-#     def generate_final_report(self, evaluations: List[Dict]) -> Dict[str, Any]:
-#         """Generate comprehensive interview report"""
-        
-#         if not evaluations:
-#             return {"error": "No evaluations to report"}
-        
-#         # Calculate overall metrics
-#         total_score = sum(eval_data['score'] for eval_data in evaluations)
-#         avg_score = total_score / len(evaluations)
-        
-#         technical_avg = sum(eval_data.get('technical_accuracy', 0) for eval_data in evaluations) / len(evaluations)
-#         depth_avg = sum(eval_data.get('depth', 0) for eval_data in evaluations) / len(evaluations)
-#         practical_avg = sum(eval_data.get('practical_application', 0) for eval_data in evaluations) / len(evaluations)
-        
-#         # Collect all strengths and improvements
-#         all_strengths = []
-#         all_improvements = []
-        
-#         for eval_data in evaluations:
-#             all_strengths.extend(eval_data.get('strengths', []))
-#             all_improvements.extend(eval_data.get('improvements', []))
-        
-#         # Performance level
-#         if avg_score >= 85:
-#             performance_level = "Excellent"
-#             recommendation = "Strong candidate - recommend for hire"
-#         elif avg_score >= 70:
-#             performance_level = "Good"
-#             recommendation = "Good candidate - consider for hire with some training"
-#         elif avg_score >= 50:
-#             performance_level = "Average"
-#             recommendation = "Average candidate - needs significant Excel training"
-#         else:
-#             performance_level = "Below Average"
-#             recommendation = "Not recommended - lacks basic Excel skills"
-        
-#         return {
-#             'overall_score': round(avg_score, 1),
-#             'performance_level': performance_level,
-#             'recommendation': recommendation,
-#             'detailed_scores': {
-#                 'technical_accuracy': round(technical_avg, 1),
-#                 'depth_of_understanding': round(depth_avg, 1),
-#                 'practical_application': round(practical_avg, 1)
-#             },
-#             'question_count': len(evaluations),
-#             'strengths_summary': list(set(all_strengths))[:5],  # Top 5 unique strengths
-#             'improvement_areas': list(set(all_improvements))[:5],  # Top 5 unique improvements
-#             'individual_question_scores': [eval_data['score'] for eval_data in evaluations]
-#         }
-
 class InterviewReportGenerator:
     def __init__(self):
         self.hiring_thresholds = {

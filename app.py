@@ -5,6 +5,11 @@ from questions_storage import QuestionStorageAgent
 from questions_agent import QuestionBankAgent, QuestionGeneratorAgent
 import time
 
+st.set_page_config(
+    page_title="Excel Mock Interviewer",
+    page_icon="📊"
+)
+
 def load_questions():
     """Load questions from JSON file or create default questions"""
     try:
