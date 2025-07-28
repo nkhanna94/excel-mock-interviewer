@@ -4,7 +4,7 @@ An intelligent interview system that automatically assesses Excel skills using A
 
 ## 🎯 Quick Demo
 
-**Live Demo:** [Excel Mock Interviewer](your-streamlit-cloud-url)
+**Live Demo:** [Excel Mock Interviewer](https://excel-mock-interviewer-7kncjiqy8opfgt32it6x7h.streamlit.app/)
 
 ## 🚀 Quick Start
 
